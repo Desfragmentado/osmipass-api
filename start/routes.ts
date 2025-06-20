@@ -3,6 +3,8 @@ import AutoSwagger from 'adonis-autoswagger'
 import swagger from '#config/swagger'
 const rawBodyMiddleware = () => import('#middleware/rawBody')
 
+router.get('/health', () => ({ status: 'ok' }))
+
 router.group(() => {
   // 🎫 Eventos
   router.get('/events', '#controllers/events_controller.index')
