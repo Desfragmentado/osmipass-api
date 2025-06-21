@@ -2,6 +2,14 @@
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "compilerOptions": {
     "rootDir": "./",
-    "outDir": "./build"
+    "outDir": "build",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "types": ["@adonisjs/core", "@adonisjs/mail"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./*"]
+    }
   }
 }
