@@ -72,7 +72,7 @@ export default class PagosController {
   /**
    * Recibe y procesa el webhook de Stripe
    */
-  public async handleWebhook({ request, response }: HttpContext) {
+  public async webhook({ request, response }: HttpContext) {
     const rawBody = request.raw()
     const signature = request.header('stripe-signature') || ''
 
@@ -101,7 +101,7 @@ export default class PagosController {
             return response.badRequest('Datos incompletos en webhook')
           }
 
-          // En el método handleWebhook
+          // En el método webhook
           await new MailService().sendPaymentSuccess(email, {
             customerName: name,
             folio,
