@@ -7,21 +7,21 @@ router.get('/health', () => ({ status: 'ok' }))
 
 router.group(() => {
   // 🎫 Eventos
-  router.get('/events', '#controllers/events_controller.index')
-  router.get('/events/:id', '#controllers/events_controller.show')
-  router.post('/events', '#controllers/events_controller.store')
+  router.get('/events', '#Controllers/events_controller.index')
+  router.get('/events/:id', '#Controllers/events_controller.show')
+  router.post('/events', '#Controllers/events_controller.store')
 
   // 🎟️ Boletos por categoría
-  router.get('/categories/:category_id/tickets', '#controllers/tickets_controller.available')
+  router.get('/categories/:category_id/tickets', '#Controllers/tickets_controller.available')
   
   // Verificación de boletos
-  router.get('/tickets/verify/:code', '#controllers/tickets_controller.verify')
+  router.get('/tickets/verify/:code', '#Controllers/tickets_controller.verify')
 
   // 💳 Checkout (Stripe)
-  router.post('/checkout', '#controllers/PagosController.checkout')
+  router.post('/checkout', '#Controllers/PagosController.checkout')
 
   // 🪝 Webhook (Stripe)
-  router.post('/stripe/webhook', '#controllers/PagosController.webhook').use([rawBodyMiddleware])
+  router.post('/stripe/webhook', '#Controllers/PagosController.webhook').use([rawBodyMiddleware])
 
 }).prefix('/api')
 

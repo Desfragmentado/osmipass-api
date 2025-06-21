@@ -52,7 +52,7 @@ export default class PagosController {
             });
         }
     }
-    async handleWebhook({ request, response }) {
+    async webhook({ request, response }) {
         const rawBody = request.raw();
         const signature = request.header('stripe-signature') || '';
         if (!rawBody) {
