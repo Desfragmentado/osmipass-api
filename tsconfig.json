@@ -1,7 +1,7 @@
-// 2. En tsconfig.json añade:
 {
+  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "compilerOptions": {
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext"
+    "rootDir": "./",
+    "outDir": "./build"
   }
 }
