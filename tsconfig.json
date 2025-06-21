@@ -9,6 +9,11 @@
     "types": ["@adonisjs/core", "@adonisjs/mail"],
     "baseUrl": ".",
     "paths": {
+      "#Controllers/*": ["./app/Controllers/*"],
+      "#controllers/*": ["./app/Controllers/*"],
+      "#services/*": ["./app/services/*"],
+      "#start/*": ["./start/*"],
+      "#config/*": ["./config/*"],
       "*": ["./*"]
     }
   }

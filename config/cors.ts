@@ -15,7 +15,7 @@ export default corsConfig*/
 /*produccion*/
 const corsConfig = defineConfig({
   enabled: true,
-  origin: ['https://osmipass.onrender.com'], // el dominio final del frontend
+  origin: ['https://osmipass.onrender.com'],
   methods: ['GET', 'HEAD', 'POST', 'PUT', 'DELETE'],
   headers: true,
   exposeHeaders: [],
