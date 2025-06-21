@@ -14,7 +14,10 @@
       "#services/*": ["./app/services/*"],
       "#start/*": ["./start/*"],
       "#config/*": ["./config/*"],
-      "*": ["./*"]
+      "#models/*": ["./app/models/*"],
+      "#middleware/*": ["./app/middleware/*"]
     }
-  }
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules", "build"]
 }
